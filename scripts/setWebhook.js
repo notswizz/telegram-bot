@@ -2,7 +2,6 @@
 const dotenv = require('dotenv');
 const path = require('path');
 
-// Load environment variables from .env.local
 dotenv.config({ path: path.resolve(__dirname, '../.env.local') });
 
 const { TELEGRAM_BOT_TOKEN } = process.env;

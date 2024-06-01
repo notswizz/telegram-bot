@@ -1,5 +1,5 @@
 // pages/api/telegram.js
-import bot from '../../lib/telegramBot';
+const bot = require('../../lib/telegramBot');
 
 export default function handler(req, res) {
   if (req.method === 'POST') {
