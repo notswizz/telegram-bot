@@ -2,9 +2,10 @@
 const bot = require('../../lib/telegramBot');
 
 export default function handler(req, res) {
+  console.log('Incoming request:', req.method, req.body);
+
   if (req.method === 'POST') {
     const { body } = req;
-    console.log('Incoming request:', req.method, req.body);
     bot.processUpdate(body);
     res.status(200).send('OK');
   } else {
